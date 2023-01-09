@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" >
+   
+    <style>
+        .cats-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .cats-container>div>div {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .cats-container>div.active {
+            border: 3px solid red;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="prev-button-container navigate-button-image">
+        <a href="./index.html"><img class="navigate-button-image" src="./assets/images/prev.png" /></a>
+    </div>
+
+    <div class="next-button-container">
+        <a href="./name.html"><img class="navigate-button-image" src="./assets/images/next.png" /></a>
+    </div>
+
+    <div class="d-flex justify-content-center flex-column w-100 text-center">
+        <h1> WELCOME TO CAT-MAN ! </h1>
+        <H2>Please chose your cat :</H2>
+        <div class="cats-container">
+            <div class="active" id="cat-1" onclick="selectCat(1)">
+                <div class="green">Cat 1</div>
+                <img class="intro-cat" src="./assets/images/cat1.png">
+            </div>
+            <div id="cat-2" onclick="selectCat(2)">
+                <div class="red">Cat 2</div>
+                <img class="intro-cat" src="./assets/images/cat2.png">
+            </div>
+            <div id="cat-3" onclick="selectCat(3)">
+                <div class="purple">Cat 3</div>
+                <img class="intro-cat" src="./assets/images/cat3.png">
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-5">
+            <a class="border-button" href="./name.html">Continue</a>
+        </div>
+    </div>
+
+    <script>
+        let current = 1;
+        localStorage.setItem("cat", "1");
+
+        function selectCat(index) {
+            document.getElementById("cat-"+current).classList.toggle("active")
+            document.getElementById("cat-"+index).classList.toggle("active")
+            current = index;
+
+            localStorage.setItem("cat", index.toString());
+        }
+    </script>
+
+</body>
