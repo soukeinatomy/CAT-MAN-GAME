@@ -1,5 +1,6 @@
 //MAINGAME
 
+
 const canvas = document.getElementById("board"); 
 canvas.width = 1025;
 canvas.height = 800;
@@ -150,40 +151,4 @@ function checkDog() {
 }
 
 
-//LOADING
 
-setTimeout(() => {
-    location.href="./game.html";
-}, 5000)
-
-const cat = localStorage.getItem("cat")
-document.getElementById("cat").src="./assets/images/cat"+cat+".png"
-
-//CATUSER
-
-let current = 1;
-localStorage.setItem("cat", "1");
-
-function selectCat(index) {
-    document.getElementById("cat-"+current).classList.toggle("active")
-    document.getElementById("cat-"+index).classList.toggle("active")
-    current = index;
-
-    localStorage.setItem("cat", index.toString());
-}
-
-//STORY
-
-const cat = localStorage.getItem("cat")
-document.getElementById("cat-image").src="./assets/images/cat"+cat+".png"
-document.getElementById("cat-name").innerHTML = localStorage.getItem("name")
-
-//USERNAME
-
-const cat = localStorage.getItem("cat")
-        document.getElementById("cat-image").src="./assets/images/cat"+cat+".png"
-        document.getElementById("cat-num").innerHTML = "Cat " + cat;
-
-        function changeCatName(e) {
-            localStorage.setItem("name", e.target.value);
-        }
