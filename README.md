@@ -26,5 +26,5 @@ User Stories :
 
 Wireframes :
 
-(Redesigning my wireframes, will be uploaded soon)
+
 
