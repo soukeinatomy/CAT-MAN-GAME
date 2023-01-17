@@ -1,3 +1,5 @@
+
+//TIMEOUT TO PAGE GAME 5SEC
 setTimeout(() => {
     location.href="./game.html";
 }, 5000)

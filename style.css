@@ -39,7 +39,7 @@ body {
 }
 
 .border-button {
-    border: 1px solid black;
+    border: 5px solid white;
     border-radius: 5px;
     height: 50px;
     display: flex;
@@ -47,7 +47,7 @@ body {
     justify-content: center;
     padding: 0 30px;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .border-button:hover {
@@ -134,3 +134,48 @@ font-weight: 700;
 .cats-container>div.active {
 border: 3px solid red;
  }
+
+
+ .loading-bar {
+    transition: all 2s;
+    animation-name: loading-bar;
+    height: 30px;
+    background-color: white;
+    animation-duration: 5s;
+    }
+    
+     @keyframes loading-bar {
+    from {width: 0;}
+    to {width: 100%;}
+    }
+    
+    .loading-text {
+    background-color: pink;
+    color: white;
+    font-size: 30px;
+    border: 3px solid white;
+    width: 200px;
+    margin: 20px auto;
+    padding: 20px;
+    font-weight: 700;
+    }
+
+    .cats-container {
+        display: flex;
+       justify-content: space-around;
+       width: 100%;
+               }
+       
+        .cats-container>div>div {
+       font-size: 20px;
+       font-weight: 700;
+               }
+       
+       .cat-name-input {
+        width: 200px;
+       height: 30px;
+        margin: auto;
+       background-color: transparent;
+       outline: none;
+       border: none;
+       }
