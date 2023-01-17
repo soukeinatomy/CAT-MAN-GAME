@@ -1,12 +1,13 @@
 body {
-    background-color:pink;
+    background-color: pink;
     margin: 0;
 }
+
 
 .intro-cat {
     width: 200px;
     height: 200px;
-    border-radius: 100px;
+    border-radius: 200px;
 }
 
 .text-center {
@@ -118,3 +119,18 @@ body {
 .w-20 {
     width: 20%;
 }
+
+.cats-container {
+display: flex;
+justify-content: space-around;
+width: 100%;
+}
+    
+.cats-container>div>div {
+font-size: 20px;
+font-weight: 700;
+}
+    
+.cats-container>div.active {
+border: 3px solid red;
+ }
